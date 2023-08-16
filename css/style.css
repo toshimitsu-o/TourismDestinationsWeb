@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    --feat-font: 'Cormorant Garamond', 'Times New Roman', Times, Georgia, serif;
+    --feat-color: #078FA2;
+    --text-color: #626262;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+body {
+    font-size: 100%;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Typography */
+
+h1, h2, h3, h4 {
+    font-family: var(--feat-font);
+    color: var(--feat-color);
+}
+h1 {
+    font-style:italic;
+}
+h1 .visit {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:normal;
+    font-weight: normal;
+    padding-right: 0.3em;
+    font-size: 0.6em;
+}
+header > h1 {
+    font-size: 2.1rem;
+    text-align: center;
+}
+header > h1 a {
+    text-decoration: none;
+}
+nav > h3 {
+    margin-left: 1rem;
+}
+p {
+    line-height: 1.5em;
+}
+a, a:visited {
+    color: var(--feat-color);
+}
+
+/* Sections */
+
+header {
+    color: var(--feat-color);
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 3px 6px #0000001A;
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+footer {
+    color: white;
+    background: #0FA3B7;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.4rem 0 3rem;
+    min-height: 800px;
+}
+nav {
+    flex: 13%;
+}
+#categories {
+    position: sticky;
+    top: 0;
+}
+#categories li {
+    padding: 0 0 0.5em;
+    cursor: pointer;
+}
+#categories li:hover {
+    color: var(--feat-color);
+}
+#history {
+    flex: 17%;
+    overflow:hidden;
+    text-align: center;
+}
+
+#history figure {
+    padding: 0;
+    margin: 0 0 0.6rem 0;
+    text-align: center;
+    width: 170px;
+    height: 170px;
+    overflow:hidden;
+    display:inline-block;
+    font-size: 0.8rem;
+}
+nav > ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+article {
+    flex: 70%;
+}
+#heading {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 1.5rem;
+    width: auto;
+    height: 230px;
+    overflow:hidden;
+    border-radius: 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#heading h2 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0px 3px 6px #00000029;
+    text-align: center;
+}
+
+p.introduction {
+    margin: auto;
+    max-width: 740px;
+    font-family: var(--feat-font);
+    font-size: 1.4rem;
+    padding: 2em 2em 2em;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+figure {
+    text-align: center;
+    width: 270px;
+    height: 270px;
+    overflow:hidden;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 13px;
+    margin: 1.5rem auto;
+    cursor: pointer;
+}
+figure .figure-img {
+    height: 77%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+figcaption {
+    height: 23%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: auto;
+    font-size: 0.9em;
+}
+
+.clear {
+    clear: both;
+}
+
+/* POI Styles */
+
+#poi-block {
+    display: none;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 13px;
+    overflow: hidden;
+    margin: 1rem 1rem 3rem 1rem;
+}
+#poi-block h3 {
+    padding: 0.8rem 1rem;
+    margin: 0;
+    text-transform: capitalize;
+    background: right center / 1.5em no-repeat url("../images/poi-toggle.png");
+    margin-right: 1rem;
+}
+#poi-kinds, #poi-list, #poi-info {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+}
+#poi-kinds > a, #poi-list > a {
+    width: fit-content;
+    height: 1.4em;
+    border-radius: 0.9em;
+    color: var(--feat-color);
+    background-color: #f1f1f1;
+    padding: 0.2em 1em;
+    margin: 0 0 0.4em 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+#poi-list > a {
+    background-color: white;
+}
+#poi-list {
+    width: auto;
+    max-height: 11rem;
+    overflow-x: scroll;
+    background-color: #f1f1f1;
+}
+#poi-info {
+    display:block;
+}
+#poi-info h4 {
+    margin: 0.5rem 0 0.5rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+#poi-info a {
+    color: var(--feat-color);
+}
+#poi-info .poidetails {
+    display: flex;
+    align-items:start;
+    justify-content:start;
+}
+#poi-info .poidesc {
+    flex: 7;
+}
+#poi-info .poidesc p {
+    margin-right: 1em;
+}
+#poi-info .poiimg {
+    flex: 3;
+}
+#poi-info .poiimg img {
+    width:100%;
+}
+
+/* Intro Styles */
+
+#intro-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:auto !important;
+    min-height: 100%;
+    margin:0 auto;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    text-align: center;
+    background-color: #E6D2CB;
+    background: top center / 100% no-repeat local #E6D2CB url("../images/yulia-ryding-GBMeE9DBiRE-unsplash.jpg");
+}
+#intro-header {
+    text-align: center;
+}
+#intro-header h1 {
+    font-size: 4rem;
+}
+#intro-header p {
+    font-size: 1.2rem;
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+}
+#intro-destinations {
+    padding: 1rem 5rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    justify-content: space-around;
+}
+#intro-destinations .destination {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 1rem;
+    width: 300px;
+    height: 180px;
+    overflow:hidden;
+    border-radius: 31px;
+    box-shadow: 0px 3px 10px #00000029;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#intro-destinations .destination h3 {
+    font-size: 1.8em;
+    background-color: rgba(255, 255, 255, 0.67);
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--text-color);
+}
+#intro-destinations .destination h3:hover {
+    color: var(--feat-color);
+}
+
+
+/* Modal Styles */
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+#modal-box {
+    height: 80%;
+    margin: auto;
+    padding: 5% 0 0;
+}
+#modal-content {
+    max-height: 100%;
+    max-width: 90%;
+    margin: auto;
+    display:block;
+}
+#modal-caption {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+#modal-close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size:50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1023px) {
+    nav {
+        flex: 20%;
+    }
+    #history {
+        flex: 100%;
+        text-align: left;
+    }
+    #history figure {
+        margin: 0.6rem;
+    }
+    #history h3 {
+        padding-left: 1rem;
+    }
+    #history-items {
+        padding-left: 1rem;
+    }
+    article {
+        flex: 80%; 
+    }
+}
+@media screen and (max-width:767px) {
+    nav {
+        flex: 100%;
+    }
+    #history {
+        flex: 100%;
+        flex-direction: row;
+    }
+    article {
+        flex: 100%; 
+    }
+    #poi-info .poidetails {
+        flex-direction: column;
+    }
+    #poi-info .poidesc {
+        flex: 100%;
+    }
+    #poi-info .poiimg {
+        flex: 100%;
+    }
+}

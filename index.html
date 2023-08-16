@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Destinations</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/opentrip.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href=""><span class="visit">visit</span>Queensland</a></h1>
+    </header>
+    <main>
+        <nav>
+            <h3>Destinations</h3>
+            <ul id="categories">
+            </ul>
+        </nav>
+        <article>
+            <div id="main-content">
+            <div id="heading">
+                <h2></h2>
+            </div>
+            <p class="introduction"></p>
+            <div id="poi-block">
+                <h3>Discover places in the region</h3>
+                <div id="poi-box">
+                    
+                    <div id="poi-kinds">
+                        <!--<a href="#" kind="accomodations">Accomodations</a>-->
+                        <a href="#poi-block" kind="amusements">Amusements</a>
+                        <a href="#poi-block" kind="architecture">Architecture</a>
+                        <a href="#poi-block" kind="cultural">Museums and Culture</a>
+                        <a href="#poi-block" kind="historic">Historical Places</a>
+                        <a href="#poi-block" kind="natural">Nature</a>
+                        <a href="#poi-block" kind="foods">Food</a>
+                        <a href="#poi-block" kind="shops">Shopping</a>
+                        <a href="#poi-block" kind="sport">Sport</a>
+                        <!--<a href="#" kind="transport">Transport</a>-->
+                    </div>
+                </div>
+            </div>
+            <h3>Photos from flickr to explore</h3>
+            <div id="container">
+
+            </div>
+        </div>
+        </article>
+        <div id="history">
+            <h3>Recently Viewed</h3>
+            <div id="history-items"></div>
+        </div>
+    </main>
+    <footer>Copyright © 2022 Queensland Tourism</footer>
+    <!-- Modal Placeholder -->
+    <div id="modal-container">
+        <span id="modal-close">&times;</span>
+        <div id="modal-box">
+            <img id="modal-content">
+            <div id="modal-caption">Caption</div>
+        </div>
+    </div>
+    <!-- Intro Placeholder -->
+    <div id="intro-container">
+        <div id="intro-header">
+            <h1><span class="visit">visit</span>Queensland</h1>
+            <p>Warm sunshine, beaches, deep green forests, and delicious food to experience. Queensland is waiting for you to feel and be in exceptional moments.</p>
+        </div>
+        <!--<h2>Destinations</h2>-->
+        <div id="intro-destinations">
+        </div>
+    </div>
+</body>
+</html>
